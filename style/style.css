@@ -12,18 +12,24 @@ body{
 /* nav */
 ol{
     position: fixed;
-    top: 40px;
-    right: 20px;
+    top: 8%;
+    right: 3%;
     z-index: 1;
 }
 
 li{
     display: inline-block;
     margin-left: 30px;
+    cursor: pointer;
+    transition: all 1s;
 }
 
-a{
-    text-decoration: none;
+li:hover{
+    transform: rotate3d(0, 1, 0, 1turn);
+}
+
+li a{
+    z-index: 1;
     font-size: 20px;
     font-weight: bold;
     color: black;
@@ -33,7 +39,15 @@ a{
     box-shadow:5px 5px 10px 1px rgba(0, 0, 0, 1);
 }
 
-/* ------------ */
+li a:hover{
+    color: red;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* product */
 .container{
     height: 100vh;
     width: 100%;
@@ -52,10 +66,15 @@ a{
     background-color: yellow;
 }
 .product{
+    position: relative;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.product:hover{
+
 }
 
 img{
@@ -63,7 +82,7 @@ img{
 }
 
 h1{
-    font-size: calc(2.5vw + 10px);
+    font-size: calc(3.3vw + 10px);
     text-transform: uppercase;
     text-align: center;
 }
